@@ -1,5 +1,6 @@
 ﻿using System.Data.Entity;
 using mobSocial.Core.Data;
+using System.Data.Entity.Infrastructure;
 
 namespace mobSocial.Data.Database
 {
@@ -14,5 +15,9 @@ namespace mobSocial.Data.Database
         bool DatabaseExists();
 
         System.Data.Entity.Database Database { get; }
+
+        DbEntityEntry Entry(object entity);
+
+        DbEntityEntry<TEntity> Entry<TEntity>(TEntity entity) where TEntity : class;
     }
 }

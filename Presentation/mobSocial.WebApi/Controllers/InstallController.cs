@@ -29,7 +29,7 @@ namespace mobSocial.WebApi.Controllers
             //lets save the database settings to config file
             var connectionString = "";
             var providerName = "";
-            connectionString = @"Data Source=.\sqlexpress;Initial Catalog=roasteddesk;Integrated Security=False;Persist Security Info=False;User ID=iis_user;Password=iis_user";
+            connectionString = @"Data Source=.\sqlexpress;Initial Catalog=roasteddesk;Integrated Security=False;Persist Security Info=False;User ID=sa;Password=abc@@123";
             providerName = "SqlServer";
 
             var databaseSettings = mobSocialEngine.ActiveEngine.Resolve<IDatabaseSettings>();

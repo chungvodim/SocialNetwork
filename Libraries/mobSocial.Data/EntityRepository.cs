@@ -63,6 +63,7 @@ namespace mobSocial.Data
 
             try
             {
+                _databaseContext.Entry<T>(entity).State = EntityState.Modified;
                 _databaseContext.SaveChanges();
             }
             catch (DbEntityValidationException ex)
